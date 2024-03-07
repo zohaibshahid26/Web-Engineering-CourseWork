@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zohaib\\source\\repos\\Web Lab 3\\Web Lab 3.csproj": {}
+    "C:\\Users\\Zohaib\\source\\repos\\Web Engineering Labs\\Web Lab 3\\Web Lab 3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zohaib\\source\\repos\\Web Lab 3\\Web Lab 3.csproj": {
+    "C:\\Users\\Zohaib\\source\\repos\\Web Engineering Labs\\Web Lab 3\\Web Lab 3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zohaib\\source\\repos\\Web Lab 3\\Web Lab 3.csproj",
+        "projectUniqueName": "C:\\Users\\Zohaib\\source\\repos\\Web Engineering Labs\\Web Lab 3\\Web Lab 3.csproj",
         "projectName": "Web Lab 3",
-        "projectPath": "C:\\Users\\Zohaib\\source\\repos\\Web Lab 3\\Web Lab 3.csproj",
+        "projectPath": "C:\\Users\\Zohaib\\source\\repos\\Web Engineering Labs\\Web Lab 3\\Web Lab 3.csproj",
         "packagesPath": "C:\\Users\\Zohaib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zohaib\\source\\repos\\Web Lab 3\\obj\\",
+        "outputPath": "C:\\Users\\Zohaib\\source\\repos\\Web Engineering Labs\\Web Lab 3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

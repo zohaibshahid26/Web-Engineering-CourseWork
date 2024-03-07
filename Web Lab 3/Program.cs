@@ -2,12 +2,13 @@
 
 class Program
 {
+
     static void Main(string[] args)
     {
 
-        DataTable Order = new DataTable();
-        DataTable Product = new DataTable();
-        DataTable ProductOrder = new DataTable();
+        DataTable Order = new DataTable("Order");
+        DataTable Product = new DataTable("Product");
+        DataTable ProductOrder = new DataTable("ProductOrder");
 
 
         DataColumn pidColumn = new DataColumn("ProductId", typeof(int));
@@ -24,7 +25,7 @@ class Program
         Product.Columns.Add(descColumn);
         Product.Columns.Add(priceColumn);
 
-        Product.PrimaryKey = new DataColumn[] { pidColumn };
+        Product.PrimaryKey = [pidColumn];
 
         DataColumn oidColumn = new DataColumn("OrderId", typeof(int));
         DataColumn createdAtColumn = new("CreatedAt", typeof(DateTime));
@@ -34,14 +35,14 @@ class Program
 
         Order.Columns.Add(oidColumn);
         Order.Columns.Add(createdAtColumn);
-        Order.PrimaryKey = new DataColumn[] { oidColumn };
+        Order.PrimaryKey = [oidColumn];
 
 
         DataColumn orderIdColumn = new DataColumn("OrderId", typeof(int));
         DataColumn productIdColumn = new DataColumn("ProductId", typeof(int));
         ProductOrder.Columns.Add(productIdColumn);
         ProductOrder.Columns.Add(orderIdColumn);
-        ProductOrder.PrimaryKey = [orderIdColumn, productIdColumn];
+        ProductOrder.PrimaryKey = [productIdColumn, orderIdColumn];
 
 
         DataSet dataSet = new();
@@ -54,6 +55,7 @@ class Program
         DataRelation relationOrder = new DataRelation("OrderRelation", Order.Columns["OrderId"], ProductOrder.Columns["OrderId"]);
         dataSet.Relations.Add(relationOrder);
 
+        // Adding rows to the tables
 
         DataRow[] ProductRows = new DataRow[5];
         ProductRows[0] = Product.NewRow();
@@ -106,42 +108,37 @@ class Program
             Order.Rows.Add(row);
         }
 
-        foreach (DataRow row in Order.Rows)
-        {
-            Console.WriteLine($"{row[0]}   {row[1]}");
-        }
-
-        foreach (DataRow row in Product.Rows)
-        {
-            Console.WriteLine($"{row[0]}   {row[1]}    {row[2]}    {row[3]}");
-        }
+        //Adding rows to the ProductOrder table
 
         DataRow[] ProductOrderRows = new DataRow[5];
-        ProductOrderRows[0] = ProductOrder.NewRow();
-        ProductOrderRows[0]["OrderId"] = ProductRows[0][0];
-        ProductOrderRows[0]["ProductId"] = OrderRows[1][0];
 
-        ProductOrderRows[1] = ProductOrder.NewRow();
-        ProductOrderRows[1]["OrderId"] = ProductRows[0][0];
-        ProductOrderRows[1]["ProductId"] = OrderRows[2][0];
+        for (int i = 0; i < 5; i++)
+        {
+            ProductOrderRows[i] = ProductOrder.NewRow();
+            ProductOrderRows[i]["ProductId"] = i + 1;
+            ProductOrderRows[i]["OrderId"] = 1;
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            ProductOrderRows[i]["ProductId"] = i + 1;
+            ProductOrderRows[i]["OrderId"] = 2;
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            ProductOrderRows[i]["ProductId"] = i + 1;
+            ProductOrderRows[i]["OrderId"] = 3;
+        }
 
-        ProductOrderRows[2] = ProductOrder.NewRow();
-        ProductOrderRows[2]["OrderId"] = ProductRows[2][0];
-        ProductOrderRows[2]["ProductId"] = OrderRows[2][0];
 
-        ProductOrderRows[3] = ProductOrder.NewRow();
-        ProductOrderRows[3]["OrderId"] = ProductRows[3][0];
-        ProductOrderRows[3]["ProductId"] = OrderRows[0][0];
+        foreach (DataRow row in ProductOrderRows)
+        {
+            ProductOrder.Rows.Add(row);
 
-        ProductOrderRows[4] = ProductOrder.NewRow();
-        ProductOrderRows[4]["OrderId"] = ProductRows[1][0];
-        ProductOrderRows[4]["ProductId"] = OrderRows[0][0];
+        }
 
-        //foreach (DataRow row in ProductOrderRows)
-        //{
-        //    ProductOrder.Rows.Add(row);
+        //Task 1
+        //Display all the products with matching product id
 
-        //}
 
         Console.Write("Enter product id: ");
         int id = int.Parse(Console.ReadLine());
@@ -156,38 +153,56 @@ class Program
             Console.WriteLine("No Product Found");
         }
 
+        //Task 2
+        //Display all the products with matching order id
 
         Console.Write("Enter order id: ");
         int oid = int.Parse(Console.ReadLine());
-        DataRow[] childRows = Order.Rows[0].GetChildRows(relationOrder);
-        if (childRows.Length != 0)
+        //throwing exception
+        DataRow o = Order.Rows.Find(oid);
+        if (o != null)
         {
-
-            Console.WriteLine($"The Name of the Products in Order {oid}");
-            foreach (DataRow row in childRows)
+            DataRow[] childRows = o.GetChildRows(relationOrder);
+            if (childRows != null)
             {
-                Console.WriteLine($"{row[1]}");
+                Console.WriteLine($"The required Products with the given OrderId {oid}are:");
+                for (int i = 0; i < childRows.Length; i++)
+                {
+                    DataRow product = Product.Rows.Find(childRows[i][0]);
+                    if (product != null)
+                    {
+                        Console.WriteLine($"{product[0]}   {product[1]}    {product[2]}    {product[3]}");
+                    }
+
+                }
+            }
+            else
+                Console.WriteLine("No Products Found");
+        }
+        else
+        {
+            Console.WriteLine("No Order Found");
+        }
+        //Task 3
+        //Display the orders which are created after the given date
+
+        Console.Write("Enter the date: ");
+        DateTime datetime = new DateTime(2024, 3, 7, 2, 52, 13);
+        DataRow[] rows = Order.Select($"CreatedAt > '{datetime}'");
+        if (rows.Length > 0)
+        {
+            Console.WriteLine($"The orders created after the {datetime} are:");
+            foreach (DataRow row in rows)
+            {
+                Console.WriteLine($"{row[0]}   {row[1]}");
             }
         }
         else
-            Console.WriteLine("No Prducts Found");
-
-        DateTime datetime = DateTime.Parse(Console.ReadLine());
-        foreach (DataRow row in Order.Rows)
         {
-            {
-                row.
-
-            }
-
-
+            Console.WriteLine("No Orders Found");
         }
 
     }
-
-
-
-
 }
 
 
