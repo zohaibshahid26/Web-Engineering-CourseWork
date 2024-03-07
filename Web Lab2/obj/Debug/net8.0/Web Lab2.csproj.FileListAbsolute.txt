@@ -1,0 +1,14 @@
+C:\Users\Zohaib\source\repos\Web Lab2\bin\Debug\net8.0\Web Lab2.exe
+C:\Users\Zohaib\source\repos\Web Lab2\bin\Debug\net8.0\Web Lab2.deps.json
+C:\Users\Zohaib\source\repos\Web Lab2\bin\Debug\net8.0\Web Lab2.runtimeconfig.json
+C:\Users\Zohaib\source\repos\Web Lab2\bin\Debug\net8.0\Web Lab2.dll
+C:\Users\Zohaib\source\repos\Web Lab2\bin\Debug\net8.0\Web Lab2.pdb
+C:\Users\Zohaib\source\repos\Web Lab2\obj\Debug\net8.0\Web Lab2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zohaib\source\repos\Web Lab2\obj\Debug\net8.0\Web Lab2.AssemblyInfoInputs.cache
+C:\Users\Zohaib\source\repos\Web Lab2\obj\Debug\net8.0\Web Lab2.AssemblyInfo.cs
+C:\Users\Zohaib\source\repos\Web Lab2\obj\Debug\net8.0\Web Lab2.csproj.CoreCompileInputs.cache
+C:\Users\Zohaib\source\repos\Web Lab2\obj\Debug\net8.0\Web Lab2.dll
+C:\Users\Zohaib\source\repos\Web Lab2\obj\Debug\net8.0\refint\Web Lab2.dll
+C:\Users\Zohaib\source\repos\Web Lab2\obj\Debug\net8.0\Web Lab2.pdb
+C:\Users\Zohaib\source\repos\Web Lab2\obj\Debug\net8.0\Web Lab2.genruntimeconfig.cache
+C:\Users\Zohaib\source\repos\Web Lab2\obj\Debug\net8.0\ref\Web Lab2.dll
