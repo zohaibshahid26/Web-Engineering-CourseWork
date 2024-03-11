@@ -1,0 +1,11 @@
+
+*.vsidx
+*.sqlite
+*.editorconfig
+Web Lab 3/obj/Release/net8.0/Web Lab 3.GlobalUsings.g.cs
+Web Lab 1/obj/Debug/net8.0/Lab 1 web.GeneratedMSBuildEditorConfig.editorconfig
+Web Lab 3/obj/Release/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+*.editorconfig
+.vs/Web Engineering Course/v17/.wsuo
+.vs/ProjectSettings.json
+Web Lab 1/obj/Debug/net8.0/Lab 1 web.assets.cache
