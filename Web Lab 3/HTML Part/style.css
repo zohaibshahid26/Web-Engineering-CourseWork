@@ -1,0 +1,46 @@
+.header{
+    display: flex;
+    background:linear-gradient(rgb(254, 163, 236), rgb(227, 215, 255));
+    color: #000;
+}
+header h1
+{
+    color: #261f1f;
+    margin: 30px;
+}
+ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: large;
+    padding: 15px;
+}
+ul li a:hover{
+    color: rgb(139, 155, 166);
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+.about{
+    
+    padding: 20px;
+    display: flex;
+    background:linear-gradient(rgb(254, 163, 236), rgb(227, 215, 255));
+    border-radius: 15px;
+    gap: 10px;
+}
+main{
+   margin: 20px;
+}
