@@ -158,7 +158,6 @@ class Program
 
         Console.Write("Enter order id: ");
         int oid = int.Parse(Console.ReadLine());
-        //throwing exception
         DataRow o = Order.Rows.Find(oid);
         if (o != null)
         {
