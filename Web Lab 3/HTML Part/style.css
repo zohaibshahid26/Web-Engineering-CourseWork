@@ -1,18 +1,21 @@
+
 .header{
     display: flex;
+    flex-wrap: nowrap;
     background:linear-gradient(rgb(254, 163, 236), rgb(227, 215, 255));
     color: #000;
+    margin: 0%;
 }
 header h1
 {
     color: #261f1f;
-    margin: 30px;
+    margin-left: 20px;
+   
 }
 ul li a{
     color: #000;
     text-decoration: none;
     font-size: large;
-    padding: 15px;
 }
 ul li a:hover{
     color: rgb(139, 155, 166);
@@ -20,23 +23,22 @@ ul li a:hover{
 nav ul{
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
-    margin: 20px;
     align-items: center;
     justify-content: center;
-
 }
 nav{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    
+    align-items: center;
 }
 .about{
     
     padding: 20px;
     display: flex;
+    flex-wrap: nowrap;
     background:linear-gradient(rgb(254, 163, 236), rgb(227, 215, 255));
     border-radius: 15px;
     gap: 10px;
@@ -56,7 +58,12 @@ main{
     background:linear-gradient(rgb(227, 215, 255),rgb(254, 163, 236));
     border-radius: 20px;
     margin-top: 20px;
-    padding: 5px
+    padding: 25px;
+
+}
+
+.food-item{
+    display: inline-block;
 }
 .food-items{
     display: flex;
@@ -64,9 +71,59 @@ main{
 }
 img {
     aspect-ratio: 5/3;
-    width: 300px;
+    width: 250px;
     height: 180px;
     object-fit: cover; 
-    border-radius: 5px;
+    border-radius: 15px;
+}
+.food-item h3 {
+    list-style-type: disc; 
+    display: list-item;
+    margin-left: 20px;
+}
+
+.food-gallery{
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.food-images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    
+}
+.food-images img {
+    aspect-ratio: 5/3;
+    width: 250px;
+    height: 180px;
+    object-fit: cover; 
+    border-radius: 15px;
+}
+.gallery-h{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    margin-top: 20px;
+}
+
+.ordered-items-h{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 20px;
+}
+.footer{
+    background:linear-gradient(rgb(254, 163, 236), rgb(227, 215, 255));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    row-gap: 2px;
 }
 
