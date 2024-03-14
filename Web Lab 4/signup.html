@@ -1,0 +1,74 @@
+<head>
+    <link rel="stylesheet" href="signup.css" />
+</head>
+
+<form action="" method="post">
+    <fieldset class="feild">
+        <legend>User Details</legend>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" style=" width: 50%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required style=" width: 50%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;">
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" style=" width: 50%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;">
+        <label for="email">Email: </label>
+        <input list="domains" id="email" name="email" style=" width: 50%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;">
+    </fieldset>
+    <datalist id="domains">
+        <option value="@gmail.com">
+        <option value="@yahoo.com">
+        <option value="@hotmail.com">
+        <option value="@live.com">
+    </datalist>
+
+    <fieldset class="feild">
+        <legend>Personal Information</legend>
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="Pakistan">USA</option>
+            <option value="UAE">Canada</option>
+            <option value="USA">Mexico</option>
+        </select>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male"> Male
+        <input type="radio" id="female" name="gender" value="female"> Female
+    </fieldset>
+    <fieldset class="feild">
+        <legend>Submit</legend>
+        <input type="checkbox" id="terms" name="terms" > I agree to the terms and conditions
+        <input type="submit" value="Signup" id="Submit">
+    </fieldset>
+    
+
+</form>
+<style>
+    body
+    {
+        background-color: #dbd8d8;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+</style>
+</form>

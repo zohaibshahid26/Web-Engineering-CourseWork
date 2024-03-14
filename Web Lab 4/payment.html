@@ -1,0 +1,35 @@
+<head>
+  <link rel="stylesheet" href="payment.css" />
+</head>
+
+<form>
+  <fieldset class="feild">
+    <legend>Card Details</legend>
+    <label for="card_number">Card Number: </label>
+    <input type="text" id="card_number" name="card_number" class="input" />
+    <label for="expiry_date">Expiration Date:</label>
+    <input type="text" id="expiry_date" name="expiry_date" class="input" />
+    <label for="cvv">CVV:</label>
+    <input type="number" id="cvv" name="cvv" class="input" />
+    <label for="cardholder_name">Cardholder Name:</label>
+    <input
+      type="text"
+      id="cardholder_name"
+      name="cardholder_name"
+      class="input"
+    />
+    <input type="submit" value="Submit" id="submit" />
+  </fieldset>
+</form>
+
+<style>
+  body {
+    background-color: #f0f0f0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+</style>

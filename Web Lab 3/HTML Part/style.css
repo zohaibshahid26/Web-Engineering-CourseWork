@@ -42,6 +42,7 @@ nav{
     background:linear-gradient(rgb(254, 163, 236), rgb(227, 215, 255));
     border-radius: 15px;
     gap: 10px;
+    transition: 0.5s ease;
 }
 main{
    margin: 20px;

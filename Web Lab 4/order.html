@@ -1,0 +1,44 @@
+<head>
+  <link rel="stylesheet" href="orderitem.css" />
+</head>
+
+<form action="" method="post">
+  <fieldset>
+    <legend style="font-size: larger">Food Order</legend>
+
+    <label for="fooditem" style="font-size: large">Select Item to Order</label>
+    <select class="items">
+      <option>Pizza</option>
+      <option>Pasta</option>
+      <option>Cake</option>
+      <option>Burger</option>
+      <option>Chinese</option>
+      <option>Italian</option>
+    </select>
+    <label for="food" style="font-size: large; display: block"
+      >Popular Food <i></i>tems:
+    </label>
+    <input list="popularfooditems" id="food" name="food" class="items" />
+    <datalist id="popularfooditems">
+      <option value="Steak"></option>
+      <option value="Pizza"></option>
+      <option value="Burger"></option>
+      <option value="Pasta"></option>
+    </datalist>
+
+    <input type="submit" value="Confirm Order" id="submit" />
+  </fieldset>
+</form>
+
+<style>
+  body {
+    background-color: #f0f0f0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  fieldset {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+</style>

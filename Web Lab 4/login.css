@@ -1,0 +1,19 @@
+.feild
+{
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+#login
+{
+    background-color: #007BFF;
+    color: rgb(40, 34, 34);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    color: white;
+}
