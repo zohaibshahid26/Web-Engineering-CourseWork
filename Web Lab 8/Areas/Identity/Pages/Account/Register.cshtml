@@ -1,0 +1,66 @@
+﻿@page
+@model RegisterModel
+@{
+    Layout = "_Landing";
+    ViewData["Title"] = "Register";
+    
+}
+    <div class="row">
+        <div class="col">
+            <div class="d-flex align-items-center justify-content-center w-100" style="background:#f0f8ff;">
+                <div class="w-50 p-5">
+                    <div class="card  border shadow m-5 p-5 rounded-3">
+                        <div class="card-header bg-white my-3">
+                            <h3 class="text-primary text-center">Register</h3>
+                        </div>
+                        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Input.FirstName" class="form-control px-2 w-100" autocomplete="FirstName" aria-required="true" placeholder="Zohaib" />
+                                    <label asp-for="Input.FirstName" class="form-label">FirstName</label>
+                                    <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Input.LastName" class="form-control px-2 w-100" autocomplete="LastName" aria-required="true" placeholder="Shahid" />
+                                    <label asp-for="Input.LastName" class="form-label">LastName</label>
+                                    <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Input.Email" class="form-control px-2 w-100" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                                    <label asp-for="Input.Email" class="form-label">Email</label>
+                                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Input.Password" class="form-control px-2 w-100" autocomplete="new-password" aria-required="true" placeholder="password" />
+                                    <label asp-for="Input.Password" class="form-label">Password</label>
+                                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                    <span>
+                                        <small class="text-muted">
+                                            Password must be at least 8 characters and contain at least one uppercase, one lowercase letter, one digit.
+                                        </small>
+                                    </span>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Input.ConfirmPassword" class="form-control px-2 w-100" autocomplete="new-password" aria-required="true" placeholder="password" />
+                                    <label asp-for="Input.ConfirmPassword" class="form-label">Confirm Password</label>
+                                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                                </div>
+                                <div class="form-check mb-3 mx-2">
+                                    <input type="checkbox" class="form-check-input border-black" style="background:#f0f8ff;" id="showPassword">
+                                    <label class="form-check-label" for="showPassword">Show Password</label>
+                                </div>
+                            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+                        </form>
+                        <div class="card-footer bg-white mt-2">
+                            <p class="text-center">
+                                Have an account?<a class="text-primary mx-2" asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Login!</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
