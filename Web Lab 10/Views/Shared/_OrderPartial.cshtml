@@ -1,0 +1,65 @@
+﻿@model OrderProductViewModel
+@{
+
+    Layout = null;
+    var amount = Model.Products.Sum(p => p.Price);
+    Model.Order.CreatedAt = DateTime.Now;
+    Model.Order.Amount = amount;
+}
+
+<hr />
+<h2>
+    Order ID: @Model.Order.OrderId
+</h2>
+<p>
+    Order Date: @Model.Order.CreatedAt
+</p>
+<p>
+    Order Amount: @Model.Order.Amount $
+</p>
+
+<h2>
+        Product Details
+</h2>
+
+
+<div class="d-flex align-items-center justify-content-center">
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Product ID
+                </th>
+                <th>
+                    Product Name
+                </th>
+                <th>
+                    Product Description
+                </th>
+                <th>
+                    Product Price
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>
+                        @product.ProductId
+                    </td>
+                    <td>
+                        @product.Name
+                    </td>
+                    <td>
+                        @product.Description
+                    </td>
+                    <td>
+                        @product.Price $
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

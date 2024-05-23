@@ -1,0 +1,35 @@
+﻿@model List<OrderProductViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+@if(ViewBag.Color == "White")
+{
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+    </style>
+}
+else
+{
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p class="display-4">This is the complete details of all the orders</p>
+    <h1>
+        Order Details
+    </h1>
+    @foreach(var order in Model)
+    {
+        <partial name="_OrderPartial" model="order" />
+    }
+
+   
+</div>

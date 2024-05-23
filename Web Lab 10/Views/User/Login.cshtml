@@ -1,0 +1,29 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <h2>Login</h2>
+            <form asp-action="Login" asp-controller="User" method="post">
+                <div class="form-group">
+                    <label for="Email" name="Email" class="control-label">Email</label>
+                    <input for="Email" name="Email" class="form-control" type="email" required/>
+                </div>
+                <div class="form-group">
+                    <label for="Password" name="Password" class="control-label">Password</label>
+                    <input for="Password" name="Password" class="form-control" type="password" required />
+                </div>
+                <div class="form-group">
+                    <label>
+                        Select your color preference
+                    </label>
+                    <select for="Color" name="Color" class="form-control">
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                    </select>
+                </div>
+                <div class="form-group my-2">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+      </div>
+</div>
